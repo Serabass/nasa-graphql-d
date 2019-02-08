@@ -1,0 +1,6 @@
+type ShardsInfo {
+    total: Int
+    successful: Int
+    skipped: Int
+    failed: Int
+}

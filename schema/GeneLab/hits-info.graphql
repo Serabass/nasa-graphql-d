@@ -1,0 +1,7 @@
+# import Hit from 'hit.graphql'
+
+type HitsInfo {
+    total: Int
+    max_score: Float
+    hits: [Hit]
+}

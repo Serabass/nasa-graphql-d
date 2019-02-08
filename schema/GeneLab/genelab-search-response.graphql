@@ -1,0 +1,9 @@
+# import ShardsInfo from './shards-info.graphql'
+# import HitsInfo from './hits-info.graphql'
+
+type GeneLabSearchResponse {
+    took: Int
+    timed_out: Boolean
+    _shards: ShardsInfo
+    hits: HitsInfo
+}

@@ -1,6 +1,7 @@
 # import NASAQuery from './NASA/index.graphql'
 # import NASAImagesQuery from './NASAImages/index.graphql'
 # import ExoplanetsQuery from './Exoplanets/index.graphql'
+# import GeneLabQuery from './GeneLab/index.graphql'
 # import Debug from './debug.graphql'
 
 directive @Root(path: String!) on FIELD_DEFINITION
@@ -11,5 +12,6 @@ type Query {
     NASA(key: String = "DEMO_KEY"): NASAQuery @Root(path: "https://api.nasa.gov")
     NASAImages: NASAImagesQuery @Root(path: "https://images-api.nasa.gov")
     Exoplanets: ExoplanetsQuery @Root(path: "https://exoplanetarchive.ipac.caltech.edu")
+    GeneLab: GeneLabQuery @Root(path: "https://genelab-data.ndc.nasa.gov")
     debug: Debug
 }

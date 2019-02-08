@@ -1,0 +1,14 @@
+# import GeneLabSearchResponse from './genelab-search-response.graphql'
+
+type GeneLabQuery {
+    search(
+        term: String
+        type: [String]
+        from: Int = 0
+        size: Int = 25
+        sort: String
+        order: String
+        ffield: String
+        fvalue: String
+    ): GeneLabSearchResponse
+}
