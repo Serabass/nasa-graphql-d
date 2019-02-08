@@ -1,4 +1,4 @@
-# import NEOObject from '../types/neo-object.graphql'
+# import NEOObject from './neo-object.graphql'
 
 type NeoBrowseResponse {
     near_earth_objects: [NEOObject!]!

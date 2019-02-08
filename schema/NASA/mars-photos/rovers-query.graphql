@@ -1,5 +1,5 @@
-# import PhotosResponse from '../responses/photos-response.graphql'
-# import RoverName from '../enums/rover-name-enum.graphql'
+# import PhotosResponse from './photos-response.graphql'
+# import RoverName from './rover-name-enum.graphql'
 # import RoverQuery from './rover-query.graphql'
 
 type RoversQuery {

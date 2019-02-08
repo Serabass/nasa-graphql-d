@@ -1,5 +1,0 @@
-# import TechportProjectResponse from '../responses/techport-project-response.graphql'
-
-type ProjectQuery {
-    projects: TechportProjectResponse!
-}

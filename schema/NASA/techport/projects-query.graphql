@@ -1,4 +1,4 @@
-# import TechportProjectsResponse from '../responses/techport-projects-response.graphql'
+# import TechportProjectsResponse from './techport-projects-response.graphql'
 # import ProjectQuery from './project-query.graphql'
 
 type ProjectsQuery {

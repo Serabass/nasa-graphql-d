@@ -1,9 +1,9 @@
-# import PlanetaryQuery from './planetary-query.graphql'
-# import MarsPhotosQuery from './mars-photos-query.graphql'
-# import EPICQuery from './epic-query.graphql'
-# import DONKIQuery from './donki-query.graphql'
-# import TechportQuery from './techport-query.graphql'
-# import NeoQuery from './neo-query.graphql'
+# import PlanetaryQuery from './planetary/index.graphql'
+# import MarsPhotosQuery from './mars-photos/index.graphql'
+# import EPICQuery from './epic/index.graphql'
+# import DONKIQuery from './donki/index.graphql'
+# import TechportQuery from './techport/index.graphql'
+# import NeoQuery from './neo/index.graphql'
 
 type NASAQuery{
     planetary: PlanetaryQuery! @PassNext(path: "/planetary")

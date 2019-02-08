@@ -1,0 +1,5 @@
+# import NaturalResponse from './natural-response.graphql'
+
+type ApiQuery {
+    natural: [NaturalResponse!]!
+}

@@ -1,4 +1,4 @@
-# import Photo from '../types/photo.graphql'
+# import Photo from './photo.graphql'
 
 type PhotosResponse {
     photos: [Photo!]!

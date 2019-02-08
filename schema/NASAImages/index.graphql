@@ -1,5 +1,5 @@
-# import SearchResponse from '../responses/search-response.graphql'
-# import LocationResponse from '../responses/location-response.graphql'
+# import SearchResponse from './search-response.graphql'
+# import LocationResponse from './location-response.graphql'
 
 type NASAImagesQuery {
     search(q: String, center: String, description: String, description_508: String, keywords: String, location: String, media_type: String, nasa_id: String, photographer: String, secondary_creator: String, title: String, year_start: String, year_end: String): SearchResponse!

@@ -1,0 +1,5 @@
+# import TechportProjectData from './techport-project-data.graphql'
+
+type TechportProjectResponse {
+    project: TechportProjectData!
+}

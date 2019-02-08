@@ -1,6 +1,6 @@
-# import NASAQuery from './queries/nasa-query.graphql'
-# import NASAImagesQuery from './queries/nasa-images-query.graphql'
-# import ExoplanetsQuery from './queries/exoplanets-query.graphql'
+# import NASAQuery from './NASA/index.graphql'
+# import NASAImagesQuery from './NASAImages/index.graphql'
+# import ExoplanetsQuery from './Exoplanets/index.graphql'
 # import Debug from './debug.graphql'
 
 directive @Root(path: String!) on FIELD_DEFINITION
