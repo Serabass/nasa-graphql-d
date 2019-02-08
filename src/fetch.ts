@@ -1,7 +1,8 @@
 import {URL} from "url";
 import nodeFetch from "node-fetch";
+import {Context} from "./interfaces";
 
-export default async function fetch<T = any>(ctx: any, pathname: any, args: any): Promise<T> {
+export default async function fetch<T = any>(ctx: Context, pathname: string, args: any): Promise<T> {
     let urlEx = new URL(ctx.rootPath);
     urlEx.pathname = pathname;
 

@@ -1,4 +1,4 @@
-import {ApolloServer, gql, makeExecutableSchema} from "apollo-server";
+import {ApolloServer, makeExecutableSchema} from "apollo-server";
 import {FetchDirective, PassNextDirective, RootDirective} from "./directives";
 import {importSchema} from "graphql-import";
 import Env from "./env";
