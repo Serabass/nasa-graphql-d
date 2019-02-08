@@ -1,0 +1,12 @@
+
+type Rover {
+    id: Int
+    name: String
+    landing_date: String
+    launch_date: String
+    status: String
+    max_sol: Int
+    max_date: String # Date
+    total_photos: Int
+    cameras: [RoverCamera]
+}

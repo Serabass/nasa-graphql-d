@@ -1,0 +1,9 @@
+# import NeoFeedResponse from '../responses/neo-feed-response.graphql'
+# import NeoResponse from '../responses/neo-response.graphql'
+# import NeoBrowseResponse from '../responses/neo-browse-response.graphql'
+
+type NeoQuery {
+    feed: NeoFeedResponse!
+    neo(id: Int!): NeoResponse!
+    browse: NeoBrowseResponse!
+}

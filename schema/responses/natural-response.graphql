@@ -1,0 +1,8 @@
+
+type NaturalResponse {
+    identifier: String!
+    caption: String!
+    image: String!
+    version: String!
+    date: String!
+}

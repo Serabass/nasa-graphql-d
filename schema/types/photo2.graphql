@@ -1,0 +1,11 @@
+# import RoverCamera from './rover-camera.graphql'
+# import Rover from './rover.graphql'
+
+type Photo2 {
+    id: Float!
+    sol: Float!
+    img_src: String!
+    camera: RoverCamera
+    earth_date: String # TODO Change to Date
+    rover: Rover
+}

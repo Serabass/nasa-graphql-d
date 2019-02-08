@@ -1,0 +1,15 @@
+# import PlanetaryQuery from './planetary-query.graphql'
+# import MarsPhotosQuery from './mars-photos-query.graphql'
+# import EPICQuery from './epic-query.graphql'
+# import DONKIQuery from './donki-query.graphql'
+# import TechportQuery from './techport-query.graphql'
+# import NeoQuery from './neo-query.graphql'
+
+type NASAQuery{
+    planetary: PlanetaryQuery! @PassNext(path: "/planetary")
+    marsPhotos: MarsPhotosQuery! @PassNext(path: "/mars-photos")
+    neo(version: String = "v1"): NeoQuery! @PassNext(path: "/neo/rest/:version")
+    EPIC: EPICQuery! @PassNext(path: "/EPIC")
+    DONKI: DONKIQuery! @PassNext(path: "/DONKI")
+    techport: TechportQuery! @PassNext(path: "/techport")
+}

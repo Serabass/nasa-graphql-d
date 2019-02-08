@@ -1,0 +1,7 @@
+# import IPSResponse from '../responses/ips-response.graphql'
+# import FLRResponse from '../responses/flr-response.graphql'
+
+type DONKIQuery {
+    IPS(startDate: String, endDate: String): [IPSResponse!]!
+    FLR(startDate: String, endDate: String): [FLRResponse!]!
+}

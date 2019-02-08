@@ -1,0 +1,6 @@
+# import RoversQuery from './rovers-query.graphql'
+
+type MarsPhotosQuery {
+    # /api/:version/rovers
+    rovers(version: String = "v1"): RoversQuery! @PassNext(path: "/api/:version/rovers")
+}

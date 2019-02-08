@@ -1,0 +1,6 @@
+# import ProjectsQuery from './projects-query.graphql'
+
+type TechportQuery {
+    # /api/projects
+    projects: ProjectsQuery!
+}

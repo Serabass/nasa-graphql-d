@@ -1,0 +1,6 @@
+# import Project from '../types/project.graphql'
+
+type ProjectsResponse {
+    totalCount: Float!
+    projects: [Project!]!
+}

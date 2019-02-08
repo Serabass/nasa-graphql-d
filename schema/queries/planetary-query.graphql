@@ -1,0 +1,7 @@
+# import APODResponse from '../responses/apod-response.graphql'
+# import EarthQuery from './earth-query.graphql'
+
+type PlanetaryQuery {
+    apod(date: String, hd: Boolean): APODResponse @Fetch(path: "/apod")
+    earth: EarthQuery! @PassNext(path: "/earth")
+}

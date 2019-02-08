@@ -1,0 +1,6 @@
+
+enum RoverName {
+    curiosity
+    opportunity
+    spirit
+}

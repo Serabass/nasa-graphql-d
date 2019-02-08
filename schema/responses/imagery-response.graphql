@@ -1,0 +1,8 @@
+
+type ImageryResponse {
+    cloud_score: Float!
+    date: String!
+    id: String!
+    service_version: String!
+    url: String!
+}

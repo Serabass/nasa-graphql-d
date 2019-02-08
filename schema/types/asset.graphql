@@ -1,0 +1,5 @@
+
+type Asset {
+    id: String!
+    date: String!
+}

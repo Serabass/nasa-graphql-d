@@ -1,0 +1,7 @@
+
+type RoverCamera {
+    id: Int
+    name: String
+    rover_id: Int
+    full_name: String
+}

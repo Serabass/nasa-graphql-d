@@ -1,0 +1,7 @@
+
+type NeoResponse {
+    id: String!
+    neo_reference_id: String!
+    name: String!
+    sandbox: String!
+}

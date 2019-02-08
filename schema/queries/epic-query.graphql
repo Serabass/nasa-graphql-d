@@ -1,0 +1,6 @@
+# import ApiQuery from './api-query.graphql'
+
+type EPICQuery {
+    # /api
+    api: ApiQuery!
+}

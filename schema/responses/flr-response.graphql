@@ -1,0 +1,4 @@
+
+type FLRResponse {
+    flrID: String
+}

@@ -1,0 +1,4 @@
+
+type SearchCollectionResponse {
+    href: String!
+}

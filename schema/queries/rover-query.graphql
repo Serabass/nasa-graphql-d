@@ -1,0 +1,9 @@
+# import PhotosResponse2 from '../responses/photos-response2.graphql'
+# import RoverCameraEnum from '../enums/rover-camera-enum.graphql'
+
+type RoverQuery {
+    photos(sol: Float,
+        earth_date: String,
+        page: Float = 1,
+        camera: RoverCameraEnum): PhotosResponse2! @Fetch(path: "/photos")
+}

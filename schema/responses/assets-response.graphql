@@ -1,0 +1,6 @@
+# import Asset from '../types/asset.graphql'
+
+type AssetsResponse {
+    count: Float!
+    results: [Asset!]!
+}

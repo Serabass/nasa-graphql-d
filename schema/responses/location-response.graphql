@@ -1,0 +1,4 @@
+
+type LocationResponse {
+    location: String!
+}

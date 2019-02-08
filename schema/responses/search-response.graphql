@@ -1,0 +1,5 @@
+# import SearchCollectionResponse from './search-collection-response.graphql'
+
+type SearchResponse {
+    collection: SearchCollectionResponse!
+}

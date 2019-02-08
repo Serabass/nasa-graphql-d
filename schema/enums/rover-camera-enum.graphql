@@ -1,0 +1,13 @@
+
+# https://api.nasa.gov/api.html#MarsPhotos
+enum RoverCameraEnum {
+    fhaz
+    rhaz
+    mast
+    chemcam
+    mahli
+    mardi
+    navcam
+    pancam
+    minites
+}

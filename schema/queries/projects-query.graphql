@@ -1,0 +1,9 @@
+# import TechportProjectsResponse from '../responses/techport-projects-response.graphql'
+# import ProjectQuery from './project-query.graphql'
+
+type ProjectsQuery {
+    projects(updatedSince: String): TechportProjectsResponse!
+
+    # /:id
+    project(id: Float!): ProjectQuery!
+}

@@ -1,0 +1,7 @@
+# import ImageryResponse from '../responses/imagery-response.graphql'
+# import AssetsResponse from '../responses/assets-response.graphql'
+
+type EarthQuery {
+    imagery(lon: Float!, lat: Float!, date: String!, cloud_score: Boolean!): ImageryResponse!
+    assets(lon: Float!, lat: Float!, begin: String!): AssetsResponse!
+}

@@ -1,8 +1,8 @@
-import * as fs from "fs-extra";
 import {ApolloServer, gql, makeExecutableSchema} from "apollo-server";
 import {FetchDirective, PassNextDirective, RootDirective} from "./directives";
+import {importSchema} from "graphql-import";
 
-const typeDefs = gql(fs.readFileSync('./schema.graphqls').toString('utf-8'));
+const typeDefs = importSchema('schema/index.graphql');
 const schema = makeExecutableSchema({
     typeDefs,
     resolvers: {

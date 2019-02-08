@@ -1,0 +1,5 @@
+
+type NEOObject {
+    neo_reference_id: String!
+    name: String!
+}

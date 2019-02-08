@@ -1,0 +1,5 @@
+
+type Project {
+    lastUpdated: String!
+    id: Float!
+}

@@ -1,0 +1,5 @@
+
+type NstedAPIResponse {
+    pl_hostname: String!
+    pl_letter: String!
+}

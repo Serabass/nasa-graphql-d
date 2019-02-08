@@ -1,0 +1,5 @@
+# import Photo from '../types/photo.graphql'
+
+type PhotosResponse {
+    photos: [Photo!]!
+}

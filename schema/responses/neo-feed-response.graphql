@@ -1,0 +1,4 @@
+
+type NeoFeedResponse {
+    element_count: Float!
+}
