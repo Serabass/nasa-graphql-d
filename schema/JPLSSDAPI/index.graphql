@@ -1,0 +1,63 @@
+# import NHATS from './nhats/index.graphql'
+# import Sentry from './sentry/index.graphql'
+# import Scout from './scout/index.graphql'
+# import MDesign from './mdesign/index.graphql'
+# import Fireball from './fireball/index.graphql'
+# import Cad from './cad/index.graphql'
+
+type JPLSSDAPIQuery {
+    nhats(
+        dv: Int
+        dur: Int
+        stay: Int
+        launch: String
+        h: Int
+        occ: Int
+        spk: Int
+        des: String
+        plot: Boolean
+    ): NHATS @Fetch(path: "/nhats.api")
+    sentry(
+        spk: Int
+        des: String
+        hMax: Int # must be transformed to h-max
+        psMin: Int # must be transformed to ps-min
+        ipMin: Int # must be transformed to ip-min
+        days: Int
+        all: Boolean
+        removed: Boolean
+    ): Sentry @Fetch(path: "/sentry.api")
+    scout(
+        tdes: Int
+        plot: String
+        file: String
+        orbits: Boolean = false
+        nOrbits: Int = 1000 # must be transformed to n-orbits # TODO Make type PositiveNumber
+        ephStart: String = "now" # must be transformed to eph-start
+        ephStop: String # must be transformed to eph-stop
+        ephStep: String # must be transformed to eph-step
+        obsCode: String = "500" # must be transformed to obs-code
+        fovDiam: Int # must be transformed to fov-diam # TODO Make type PositiveNumber
+        fovRa: String # must be transformed to fov-ra
+        fovDec: String # must be transformed to fov-dec
+        fovVmag: String # must be transformed to fov-vmag
+    ): Scout @Fetch(path: "/scout.api")
+
+    mdesign(
+        des: String
+        # ...
+        # TODO Add others
+    ): MDesign @Fetch(path: "/mdesign.api")
+
+    fireball(
+        sort: String
+        # ...
+        # TODO Add others
+    ): Fireball @Fetch(path: "/fireball.api")
+
+    cad(
+        sort: String
+        # ...
+        # TODO Add others
+    ): Cad @Fetch(path: "/fireball.api")
+}

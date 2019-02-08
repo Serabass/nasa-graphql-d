@@ -1,0 +1,9 @@
+# import Signature from '../signature.graphql'
+# import SentryObject from './sentry-object.graphql'
+
+# https://ssd-api.jpl.nasa.gov/doc/sentry.html
+type Sentry {
+    count: String
+    signature: Signature
+    data: [SentryObject]
+}

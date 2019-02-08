@@ -1,0 +1,9 @@
+# import Signature from '../signature.graphql'
+# import ScoutObject from './scout-object.graphql'
+
+# https://ssd-api.jpl.nasa.gov/doc/scout.html
+type Scout {
+    count: String
+    signature: Signature
+    data: [ScoutObject]
+}

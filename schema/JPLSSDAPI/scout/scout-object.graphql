@@ -1,0 +1,26 @@
+type ScoutObject {
+    neo1kmScore: String
+    lastRun: String
+    uncP1: String
+    dec: String
+    neoScore: String
+    rating: String
+    rate: String
+    unc: String
+    phaScore: String
+    ra: String
+    elong: String
+    nObs: String
+    arc: String
+    tEphem: String
+    objectName: String
+    tisserandScore: String
+    caDist: String
+    vInf: String
+    H: String
+    rmsN: String
+    ieoScore: String
+    geocentricScore: String
+    moid: String
+    Vmag: String
+}

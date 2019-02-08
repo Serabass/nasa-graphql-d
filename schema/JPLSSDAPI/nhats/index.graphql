@@ -1,0 +1,9 @@
+# import Signature from '../signature.graphql'
+# import NHATSObject from './nhats-object.graphql'
+
+# https://ssd-api.jpl.nasa.gov/doc/nhats.html
+type NHATS {
+    count: String
+    signature: Signature
+    data: [NHATSObject]
+}

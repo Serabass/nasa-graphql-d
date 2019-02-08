@@ -1,0 +1,16 @@
+type SentryObject {
+    ip: String
+    range: String
+    ps_cum: String
+    diameter: String
+    ps_max: String
+    h: String
+    last_obs: String
+    v_inf: String
+    fullname: String
+    n_imp: String
+    last_obs_jd: String
+    ts_max: String
+    id: String
+    des: String
+}

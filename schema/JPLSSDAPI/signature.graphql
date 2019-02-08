@@ -1,0 +1,4 @@
+type Signature {
+    source: String
+    version: String
+}

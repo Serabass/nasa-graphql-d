@@ -1,0 +1,23 @@
+# import MinDV from './min-dv.graphql'
+# import MinDur from './min-dur.graphql'
+
+type NHATSObject {
+    min_size: String
+    occ: String
+    n_via_traj: String
+    min_dv: MinDV
+    radar_snr_a: String
+    obs_mag: String
+    orbit_id: String
+    h: String
+    obs_flag: String
+    obs_end: String
+    min_dur: MinDur
+    radar_snr_g: String
+    radar_obs_a: String
+    obs_start: String
+    radar_obs_g: String
+    fullname: String
+    des: String
+    max_size: String
+}

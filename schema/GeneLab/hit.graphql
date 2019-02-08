@@ -1,4 +1,5 @@
 # import HitHighlight from 'hit-highlight.graphql'
+# import HitSource from 'hit-source.graphql'
 
 type Hit {
     _index: String

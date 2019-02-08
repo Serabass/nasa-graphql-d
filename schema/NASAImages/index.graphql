@@ -2,8 +2,22 @@
 # import LocationResponse from './location-response.graphql'
 
 type NASAImagesQuery {
-    search(q: String, center: String, description: String, description_508: String, keywords: String, location: String, media_type: String, nasa_id: String, photographer: String, secondary_creator: String, title: String, year_start: String, year_end: String): SearchResponse!
-    asset(nasaId: String!): SearchResponse!
-    metadata(nasaId: String!): LocationResponse!
-    captions(nasaId: String!): LocationResponse!
+    search(
+        q: String
+        center: String
+        description: String
+        description_508: String
+        keywords: String
+        location: String
+        media_type: String
+        nasa_id: String
+        photographer: String
+        secondary_creator: String
+        title: String
+        year_start: String
+        year_end: String
+    ): SearchResponse! @Fetch(path: "/search")
+    asset(nasaId: String!): SearchResponse! @Fetch(path: "/asset/:nasaId")
+    metadata(nasaId: String!): LocationResponse! @Fetch(path: "/metadata/:nasaId")
+    captions(nasaId: String!): LocationResponse! @Fetch(path: "/captions/:nasaId")
 }

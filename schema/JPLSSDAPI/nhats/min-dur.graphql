@@ -1,0 +1,4 @@
+type MinDur {
+    dv: String
+    dur: String
+}
