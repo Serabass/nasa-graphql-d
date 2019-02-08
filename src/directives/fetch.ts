@@ -1,7 +1,7 @@
 import {SchemaDirectiveVisitor} from "graphql-tools";
 import {GraphQLField} from "graphql";
 import * as _path from "path";
-import URLEx from "../URLEx";
+import fetch from "../fetch";
 
 export class FetchDirective extends SchemaDirectiveVisitor {
     public visitFieldDefinition(field: GraphQLField<any, any>) {
@@ -13,7 +13,7 @@ export class FetchDirective extends SchemaDirectiveVisitor {
 
             console.log(url);
 
-            return URLEx.fetch(context, url, args);
+            return fetch(context, url, args);
         };
     }
 }
