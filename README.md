@@ -4,4 +4,8 @@
 
 https://api.nasa.gov
 
-Запуск: `$ npm run dev`
+Запуск: 
+```
+$ npm install # or yarn
+$ npm run dev # or yarn dev
+```
