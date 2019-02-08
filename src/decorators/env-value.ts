@@ -8,7 +8,7 @@ export function env(target: any) {
     });
 }
 
-export default function EnvValue(name?: string): PropertyDecorator {
+export function EnvValue(name?: string): PropertyDecorator {
     return (target: any, propertyKey: string | symbol) => {
         let cb: Function;
         let type = Reflect.getMetadata('design:type', target, propertyKey);
