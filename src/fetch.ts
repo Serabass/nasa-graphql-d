@@ -18,7 +18,7 @@ export default async function fetch<T = any>(ctx: Context, pathname: string, arg
     }
 
     let url = urlEx.toString();
-    console.log(url);
+    // console.log(url);
     let response = await nodeFetch(url);
     let limit: string = response.headers.get("x-ratelimit-limit") as string;
     let remaining: string = response.headers.get("x-ratelimit-remaining") as string;

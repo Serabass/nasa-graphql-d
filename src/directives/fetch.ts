@@ -12,7 +12,7 @@ export class FetchDirective extends SchemaDirectiveVisitor {
             source.currentPath.push(path);
             let url = _path.join(...source.currentPath).replace(/\\/g, '/');
 
-            console.log(url);
+            // console.log(url);
 
             return fetch(context, url, args);
         };
