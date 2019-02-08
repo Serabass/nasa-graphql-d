@@ -7,8 +7,18 @@ const schema = makeExecutableSchema({
     typeDefs,
     resolvers: {
         Query: {
-            rateLimit: () => (global as any).rateLimit,
-            rateLimitRemaining: () => (global as any).rateLimitRemaining,
+            debug: () => (global as any).debug
+        },
+
+        Debug: {
+            rateLimit: (source) => source.rateLimit,
+            rateLimitRemaining: (source) => source.rateLimitRemaining,
+            lastUrl: (source) => source.lastUrl,
+        },
+
+        // Type field resolver example
+        PhotosResponse2: {
+            urls: (source) => source.photos.map((photo: any) => photo.img_src),
         }
     },
     schemaDirectives: {

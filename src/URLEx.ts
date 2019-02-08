@@ -18,13 +18,20 @@ export default class URLEx extends URL {
         }
 
         let url = urlEx.toString();
+        console.log(url);
         let response = await fetch(url);
         let limit: string = response.headers.get("x-ratelimit-limit") as string;
         let remaining: string = response.headers.get("x-ratelimit-remaining") as string;
 
         let json = await response.json();
-        (global as any).rateLimit = parseInt(limit, 10);
-        (global as any).rateLimitRemaining = parseInt(remaining, 10);
+
+        if (!(global as any).debug) {
+            (global as any).debug = {};
+        }
+
+        (global as any).debug.rateLimit = parseInt(limit, 10);
+        (global as any).debug.rateLimitRemaining = parseInt(remaining, 10);
+        (global as any).debug.lastUrl = url;
         return json as T;
     }
 }

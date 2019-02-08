@@ -2,4 +2,5 @@
 
 type PhotosResponse2 {
     photos: [Photo2!]!
+    urls: [String]
 }

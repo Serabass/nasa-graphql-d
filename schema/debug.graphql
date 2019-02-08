@@ -1,0 +1,5 @@
+type Debug {
+    rateLimitRemaining: Int
+    rateLimit: Int
+    lastUrl: String
+}

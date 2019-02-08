@@ -1,15 +1,15 @@
 # import NASAQuery from './queries/nasa-query.graphql'
 # import NASAImagesQuery from './queries/nasa-images-query.graphql'
 # import ExoplanetsQuery from './queries/exoplanets-query.graphql'
+# import Debug from './debug.graphql'
 
 directive @Root(path: String!) on FIELD_DEFINITION
 directive @Fetch(path: String!) on FIELD_DEFINITION
 directive @PassNext(path: String!) on FIELD_DEFINITION
 
 type Query {
-    NASA(key: String!): NASAQuery @Root(path: "https://api.nasa.gov")
+    NASA(key: String = "DEMO_KEY"): NASAQuery @Root(path: "https://api.nasa.gov")
     NASAImages: NASAImagesQuery @Root(path: "https://images-api.nasa.gov")
     Exoplanets: ExoplanetsQuery @Root(path: "https://exoplanetarchive.ipac.caltech.edu")
-    rateLimitRemaining: Int
-    rateLimit: Int
+    debug: Debug
 }
