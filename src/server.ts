@@ -1,6 +1,7 @@
 import {ApolloServer, gql, makeExecutableSchema} from "apollo-server";
 import {FetchDirective, PassNextDirective, RootDirective} from "./directives";
 import {importSchema} from "graphql-import";
+import Env from "./env";
 
 const typeDefs = importSchema('schema/index.graphql');
 const schema = makeExecutableSchema({
@@ -37,6 +38,8 @@ const server = new ApolloServer({
         return {req};
     }
 });
+
+console.log(Env);
 
 server.listen().then(({url}: any) => {
     console.log(`🚀  Server ready at ${url}`);

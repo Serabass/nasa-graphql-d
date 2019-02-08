@@ -19,6 +19,7 @@
     "graphql-tools": "^4.0.4",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.9",
+    "reflect-metadata": "^0.1.13",
     "ts-node": "^8.0.2",
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.3.1"
