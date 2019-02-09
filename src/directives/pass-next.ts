@@ -6,8 +6,6 @@ export class PassNextDirective extends SchemaDirectiveVisitor {
     public visitFieldDefinition(field: GraphQLField<Source, Context>) {
         let path: string = this.args.path;
 
-        debugger;
-
         let restParams = Reflect.getMetadata('schema:restParams', field);
         if (restParams) {
             debugger;

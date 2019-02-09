@@ -2,6 +2,7 @@
 # import NPHTable from './nph-table.graphql'
 # import Fetch from '../directives/Fetch.graphql'
 
+# https://api.nasa.gov/api.html#exoPlanetIntro
 type NstedAPIQuery {
     nph(table: NPHTable!, where: String!, format: String = "json"): [NstedAPIResponse!]! @Fetch(path: "/nph-nstedAPI")
 }

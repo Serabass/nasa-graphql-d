@@ -9,8 +9,6 @@ export class RestParamDirective extends SchemaDirectiveVisitor {
     }): GraphQLArgument | void | null {
         let restParams: GraphQLArgument[] = Reflect.getMetadata('schema:restParams', details.field);
 
-        debugger;
-
         if (!restParams) {
             restParams = [];
         }

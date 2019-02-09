@@ -6,7 +6,7 @@ export class RootDirective extends SchemaDirectiveVisitor {
     public visitFieldDefinition(field: GraphQLField<Source, Context>) {
         const {path} = this.args;
 
-        field.resolve = (source: Source, args, context: Context): Source => {
+        field.resolve = (source: Source, args: any, context: Context): Source => {
             context.API_KEY = args.key;
             context.rootPath = path;
             return {

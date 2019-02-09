@@ -1,10 +1,12 @@
 import {URL} from "url";
 import nodeFetch from "node-fetch";
-import {Context} from "./interfaces";
+import {Context, FetchArgs} from "./interfaces";
 
-export default async function fetch<T = any>(ctx: Context, pathname: string, args: any): Promise<T> {
+export default async function fetch<T = any>(ctx: Context, pathname: string, args: FetchArgs): Promise<T> {
     let urlEx = new URL(ctx.rootPath);
     urlEx.pathname = pathname;
+
+    debugger;
 
     if (ctx.API_KEY) {
         urlEx.searchParams.append("api_key", ctx.API_KEY);
@@ -12,8 +14,8 @@ export default async function fetch<T = any>(ctx: Context, pathname: string, arg
 
     if (args) {
         Object.keys(args)
-            .forEach((key) => {
-                urlEx.searchParams.append(key, args[key]);
+            .forEach((key: string ) => {
+                urlEx.searchParams.append(key, args[key as keyof FetchArgs]);
             });
     }
 
