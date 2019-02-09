@@ -14,7 +14,7 @@ export default async function fetch<T = any>(ctx: Context, pathname: string, arg
 
     if (args) {
         Object.keys(args)
-            .forEach((key: string ) => {
+            .forEach((key: string) => {
                 urlEx.searchParams.append(key, args[key as keyof FetchArgs]);
             });
     }
