@@ -4,11 +4,7 @@
 # import GeneLabQuery from './GeneLab/index.graphql'
 # import JPLSSDAPIQuery from './JPLSSDAPI/index.graphql'
 # import Debug from './debug.graphql'
-
-directive @Root(path: String!) on FIELD_DEFINITION
-directive @Fetch(path: String!) on FIELD_DEFINITION
-directive @PassNext(path: String!) on FIELD_DEFINITION
-directive @RestParam on ARGUMENT_DEFINITION
+# import Root from './directives/root.graphql'
 
 type Query {
     NASA(key: String = "DEMO_KEY"): NASAQuery @Root(path: "https://api.nasa.gov")

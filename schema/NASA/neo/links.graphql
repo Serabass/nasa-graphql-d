@@ -1,0 +1,5 @@
+type Links {
+    next: String
+    prev: String
+    self: String
+}

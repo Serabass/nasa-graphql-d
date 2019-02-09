@@ -1,5 +1,6 @@
 # import NstedAPIResponse from './nsted-api-response.graphql'
 # import NPHTable from './nph-table.graphql'
+# import Fetch from '../directives/Fetch.graphql'
 
 type NstedAPIQuery {
     nph(table: NPHTable!, where: String!, format: String = "json"): [NstedAPIResponse!]! @Fetch(path: "/nph-nstedAPI")

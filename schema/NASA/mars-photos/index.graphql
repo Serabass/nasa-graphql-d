@@ -1,4 +1,6 @@
 # import RoversQuery from './rovers-query.graphql'
+# import PassNext from '../../directives/PassNext.graphql'
+# import RestParam from '../../directives/RestParam.graphql'
 
 type MarsPhotosQuery {
     # /api/:version/rovers

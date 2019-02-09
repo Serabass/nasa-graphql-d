@@ -1,5 +1,6 @@
 # import PhotosResponse2 from './photos-response2.graphql'
 # import RoverCameraEnum from './rover-camera-enum.graphql'
+# import Fetch from '../../directives/Fetch.graphql'
 
 type RoverQuery {
     photos(sol: Float,

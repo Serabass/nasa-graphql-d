@@ -8,7 +8,7 @@ export class FetchDirective extends SchemaDirectiveVisitor {
     public visitFieldDefinition(field: GraphQLField<Source, Context>) {
         const {path} = this.args;
 
-        field.resolve = (source, args: any, context): any => {
+        field.resolve = (source: Source, args: any, context: Context): any => {
             source.currentPath.push(path);
             let url = _path.join(...source.currentPath).replace(/\\/g, '/');
 

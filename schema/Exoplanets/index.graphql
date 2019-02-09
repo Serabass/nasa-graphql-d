@@ -1,4 +1,5 @@
 # import NstedAPIQuery from './nsted-api-query.graphql'
+# import PassNext from '../directives/PassNext.graphql'
 
 type ExoplanetsQuery {
     nsted: NstedAPIQuery! @PassNext(path: "/cgi-bin/nstedAPI")

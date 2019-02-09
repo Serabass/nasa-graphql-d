@@ -1,6 +1,7 @@
 # import IPSResponse from './ips-response.graphql'
 # import FLRResponse from './flr-response.graphql'
 
+# Database Of Notifications, Knowledge, Information (DONKI)
 type DONKIQuery {
     IPS(startDate: String, endDate: String): [IPSResponse!]!
     FLR(startDate: String, endDate: String): [FLRResponse!]!

@@ -1,4 +1,6 @@
+# import Links from './Links.graphql'
 
 type NeoFeedResponse {
+    links: Links
     element_count: Float!
 }

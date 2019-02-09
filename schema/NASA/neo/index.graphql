@@ -1,9 +1,12 @@
-# import NeoFeedResponse from './neo-feed-response.graphql'
+# import NeoFeedQuery from './neo-feed-query.graphql'
 # import NeoResponse from './neo-response.graphql'
 # import NeoBrowseResponse from './neo-browse-response.graphql'
+# import Fetch from '../../../Fetch.graphql'
+# import PassNext from '../../../PassNext.graphql'
+# import RestParam from '../../../RestParam.graphql'
 
 type NeoQuery {
-    feed: NeoFeedResponse!
-    neo(id: Int!): NeoResponse!
-    browse: NeoBrowseResponse!
+    feed: NeoFeedQuery! @PassNext(path: "/feed")
+    neo(asteroidId: Int! @RestParam): NeoResponse! @Fetch(path: "/neo/:asteroidId")
+    browse: NeoBrowseResponse! @Fetch(path: "/feed")
 }

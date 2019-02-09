@@ -1,6 +1,7 @@
 # import PhotosResponse from './photos-response.graphql'
 # import RoverName from './rover-name-enum.graphql'
 # import RoverQuery from './rover-query.graphql'
+# import PassNext from '../../directives/PassNext.graphql'
 
 type RoversQuery {
     photos(sol: Float!, roverName: RoverName): PhotosResponse!

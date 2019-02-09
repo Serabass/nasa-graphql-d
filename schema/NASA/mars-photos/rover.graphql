@@ -1,3 +1,4 @@
+# import RoverCamera from './rover-camera.graphql'
 
 type Rover {
     id: Int

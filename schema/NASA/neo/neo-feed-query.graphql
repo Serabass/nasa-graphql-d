@@ -1,0 +1,6 @@
+# import NeoFeedResponse from './neo-feed-response.graphql'
+
+type NeoFeedQuery {
+    index(start_date: String, end_date: String, detailed: Boolean): NeoFeedResponse
+    today(detailed: Boolean): NeoFeedResponse
+}
