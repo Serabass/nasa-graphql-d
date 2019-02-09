@@ -1,9 +1,9 @@
 # import NeoFeedQuery from './neo-feed-query.graphql'
 # import NeoResponse from './neo-response.graphql'
 # import NeoBrowseResponse from './neo-browse-response.graphql'
-# import Fetch from '../../directives/Fetch.graphql'
-# import PassNext from '../../directives/PassNext.graphql'
-# import RestParam from '../../directives/RestParam.graphql'
+# import Fetch from '../../../directives/Fetch.graphql'
+# import PassNext from '../../../directives/PassNext.graphql'
+# import RestParam from '../../../directives/RestParam.graphql'
 
 type NeoQuery {
     feed: NeoFeedQuery! @PassNext(path: "/feed")

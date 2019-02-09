@@ -4,7 +4,7 @@
 # import GeneLabQuery from './GeneLab/index.graphql'
 # import JPLSSDAPIQuery from './JPLSSDAPI/index.graphql'
 # import Debug from './debug.graphql'
-# import Root from './directives/root.graphql'
+# import Root from './../directives/root.graphql'
 
 type Query {
     NASA(key: String = "DEMO_KEY"): NASAQuery @Root(path: "https://api.nasa.gov")

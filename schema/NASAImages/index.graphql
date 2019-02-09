@@ -1,6 +1,6 @@
 # import SearchResponse from './search-response.graphql'
 # import LocationResponse from './location-response.graphql'
-# import Fetch from '../directives/Fetch.graphql'
+# import Fetch from '../../directives/Fetch.graphql'
 
 type NASAImagesQuery {
     search(
