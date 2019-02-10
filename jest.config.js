@@ -1,5 +1,5 @@
 module.exports = {
-    roots: ["<rootDir>/src"],
+    roots: ["<rootDir>/"],
     globals: {
         "ts-jest": {
             tsConfig: "tsconfig.json",
@@ -11,6 +11,8 @@ module.exports = {
     transform: {
         "^.+\\.(ts|tsx)$": "ts-jest"
     },
-    testMatch: ["**/__tests__/**/*-test.(ts|js)"],
-    testEnvironment: "node"
+    testMatch: [
+        "**/*-test.ts",
+    ],
+    testEnvironment: "node",
 };

@@ -1,5 +1,10 @@
 # import Photo from './photo.graphql'
 
+type PhotosResponseResult {
+    photos: [Photo!]
+}
+
 type PhotosResponse {
-    photos: [Photo!]!
+    url: String!
+    result: PhotosResponseResult
 }

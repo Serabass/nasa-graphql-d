@@ -4,6 +4,6 @@
 # import PassNext from '../../directives/index.graphql'
 
 type RoversQuery {
-    photos(sol: Float!, roverName: RoverName): PhotosResponse!
+    photos(sol: Float!, roverName: RoverName): PhotosResponse @Fetch(path: "/photos")
     rover(roverName: RoverName): RoverQuery! @PassNext(path: "/:roverName")
 }
