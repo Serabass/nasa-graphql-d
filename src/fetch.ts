@@ -2,7 +2,6 @@ import {URL} from "url";
 import nodeFetch from "node-fetch";
 
 export default async function fetch<T = any>(urlEx: URL): Promise<T> {
-    debugger;
     let url = urlEx.toString();
     // console.log(url);
     let response = await nodeFetch(url);
@@ -17,5 +16,6 @@ export default async function fetch<T = any>(urlEx: URL): Promise<T> {
         lastUrl: url,
     };
 
+    debugger;
     return json as T;
 }

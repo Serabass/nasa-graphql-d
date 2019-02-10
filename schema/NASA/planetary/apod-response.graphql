@@ -5,8 +5,8 @@ type APODResponse {
 }
 
 type APODResponseResult {
-    copyright: String!
-    date: String!
+    copyright: String
+    date: String
     explanation: String!
     hdurl: String!
     media_type: String!
