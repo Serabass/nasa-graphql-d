@@ -1,1 +1,0 @@
-directive @Root(path: String!) on FIELD_DEFINITION

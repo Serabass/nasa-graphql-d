@@ -1,6 +1,6 @@
 # import NstedAPIResponse from './nsted-api-response.graphql'
 # import NPHTable from './nph-table.graphql'
-# import Fetch from '../../directives/Fetch.graphql'
+# import Fetch from '../directives/index.graphql'
 
 # https://api.nasa.gov/api.html#exoPlanetIntro
 type NstedAPIQuery {

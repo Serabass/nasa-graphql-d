@@ -4,7 +4,7 @@
 # import MDesign from './mdesign/index.graphql'
 # import Fireball from './fireball/index.graphql'
 # import Cad from './cad/index.graphql'
-# import Fetch from '../../directives/Fetch.graphql'
+# import Fetch from '../directives/index.graphql'
 
 type JPLSSDAPIQuery {
     nhats(

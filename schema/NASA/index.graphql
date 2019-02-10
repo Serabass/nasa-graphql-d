@@ -4,7 +4,7 @@
 # import DONKIQuery from './donki/index.graphql'
 # import TechportQuery from './techport/index.graphql'
 # import NeoQuery from './neo/index.graphql'
-# import PassNext from '../../directives/PassNext.graphql'
+# import PassNext from '../directives/index.graphql'
 
 type NASAQuery{
     planetary: PlanetaryQuery! @PassNext(path: "/planetary")

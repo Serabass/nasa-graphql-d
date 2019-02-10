@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "nodemon",
-    "dev": "nodemon --config nodemon.json"
+    "dev": "nodemon --config nodemon.json",
+    "dev-sv": "nodemon --config nodemon-sv.json"
   },
   "dependencies": {
     "@types/fs-extra": "^5.0.4",
