@@ -13,10 +13,11 @@ describe('Url Building Tests', () => {
         } as any);
     });
 
-    async function q(query: string) {
+    async function q(query: string, variables: any = {}) {
         return await client.query<any>(
             {
-                query: gql(query)
+                query: gql(query),
+                variables
             }
         );
     }
@@ -44,6 +45,16 @@ describe('Url Building Tests', () => {
 
     it('Url must be correct 3 (rest)', async() => {
         let result = await q(`query { NASA { marsPhotos { rovers(version: "v1") { photos(sol: 1000, roverName: curiosity) { url } } } } }`);
+        expect(result).toBeDefined();
+        expect(result.data.NASA.marsPhotos.rovers.photos.url)
+            .toBe("https://api.nasa.gov/mars-photos/api/v1/rovers/photos?api_key=DEMO_KEY&sol=1000&roverName=curiosity");
+    });
+
+    it('Url must be correct 3 (rest, with variables)', async() => {
+        let result = await q(`query($version: String!, $sol: Int!) { NASA { marsPhotos { rovers(version: $version) { photos(sol: $sol, roverName: curiosity) { url } } } } }`, {
+            version: 'v1',
+            sol: 1000
+        });
         expect(result).toBeDefined();
         expect(result.data.NASA.marsPhotos.rovers.photos.url)
             .toBe("https://api.nasa.gov/mars-photos/api/v1/rovers/photos?api_key=DEMO_KEY&sol=1000&roverName=curiosity");
