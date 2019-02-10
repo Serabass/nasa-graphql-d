@@ -1,7 +1,7 @@
 # https://genelab-data.ndc.nasa.gov/genelab/data/search?term=space&from=0&type=cgene,nih_geo_gse&ffield=links&fvalue=GPL16417&ffield=Data%20Source%20Accession&fvalue=GSE82255&api_key=DEMO_KEY
 
 type HitSource {
-    # "Authoritative Source URL": String # TODO Write resolver
+    Authoritative_Source_URL: String # TODO Write resolver
     links: [String]
-    # "Flight Program": String
+    Flight_Program: String
 }

@@ -1,4 +1,4 @@
-directive @Fetch(path: String!, method: String = "GET") on FIELD_DEFINITION
+directive @Fetch(path: String!, method: String = "GET", type: String = "json") on FIELD_DEFINITION
 directive @PassNext(path: String!) on FIELD_DEFINITION
 directive @RestParam on ARGUMENT_DEFINITION
 directive @Root(path: String!) on FIELD_DEFINITION
