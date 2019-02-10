@@ -1,6 +1,11 @@
 # import Signature from '../signature.graphql'
 
 # https://ssd-api.jpl.nasa.gov/doc/fireball.html
-type Fireball {
+type FireballResult {
     signature: Signature
+}
+
+type Fireball {
+    url: String!
+    result: FireballResult
 }

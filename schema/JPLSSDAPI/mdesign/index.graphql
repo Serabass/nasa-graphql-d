@@ -1,7 +1,12 @@
 # import Signature from '../signature.graphql'
 
 # https://ssd-api.jpl.nasa.gov/doc/mdesign.html
-type MDesign {
+type MDesignResult {
     signature: Signature
     # ...
+}
+
+type MDesign {
+    url: String!
+    result: MDesignResult
 }

@@ -2,8 +2,13 @@
 # import NHATSObject from './nhats-object.graphql'
 
 # https://ssd-api.jpl.nasa.gov/doc/nhats.html
-type NHATS {
+type NHATSResult {
     count: String
     signature: Signature
     data: [NHATSObject]
+}
+
+type NHATS {
+    url: String!
+    result: NHATSResult
 }

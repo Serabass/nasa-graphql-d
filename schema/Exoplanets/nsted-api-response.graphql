@@ -1,5 +1,10 @@
 
-type NstedAPIResponse {
+type NstedAPIResponseResult {
     pl_hostname: String!
     pl_letter: String!
+}
+
+type NstedAPIResponse {
+    url: String!
+    result: [NstedAPIResponseResult]
 }

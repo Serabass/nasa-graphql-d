@@ -1,7 +1,6 @@
 import {ApolloServer, makeExecutableSchema} from "apollo-server";
 import {FetchDirective, PassNextDirective, RootDirective} from "./directives";
 import {importSchema} from "graphql-import";
-import Env from "./env";
 import {RestParamDirective} from "./directives/rest-param";
 
 const typeDefs = importSchema('schema/index.graphql');
@@ -19,7 +18,7 @@ const schema = makeExecutableSchema({
         },
 
         // Type field resolver example
-        PhotosResponse2: {
+        PhotosResponse2Result: {
             urls: (source) => source.photos.map((photo: any) => photo.img_src),
         }
     },
@@ -31,7 +30,7 @@ const schema = makeExecutableSchema({
     }
 });
 
-const server = new ApolloServer({
+export const server = new ApolloServer({
     schema,
     rootValue: {
         currentPath: [],
@@ -39,8 +38,4 @@ const server = new ApolloServer({
     context: ({req}: any) => {
         return {req};
     }
-});
-
-server.listen().then(({url}: any) => {
-    console.log(`🚀  Server ready at ${url}`);
 });

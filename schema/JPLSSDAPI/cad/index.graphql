@@ -1,7 +1,12 @@
 # import Signature from '../signature.graphql'
 
 # https://ssd-api.jpl.nasa.gov/doc/cad.html
-type Cad {
+type CadResult {
     signarure: Signature
     count: String
+}
+
+type Cad {
+    url: String!
+    result: CadResult
 }

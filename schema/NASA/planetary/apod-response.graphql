@@ -1,5 +1,10 @@
 
 type APODResponse {
+    url: String!
+    result: APODResponseResult
+}
+
+type APODResponseResult {
     copyright: String!
     date: String!
     explanation: String!

@@ -1,4 +1,9 @@
 
-type LocationResponse {
+type LocationResponseResult {
     location: String!
+}
+
+type LocationResponse {
+    url: String!
+    result: LocationResponseResult
 }

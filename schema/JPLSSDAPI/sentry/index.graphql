@@ -3,6 +3,11 @@
 
 # https://ssd-api.jpl.nasa.gov/doc/sentry.html
 type Sentry {
+    url: String!
+    result: SentryResult
+}
+
+type SentryResult {
     count: String
     signature: Signature
     data: [SentryObject]

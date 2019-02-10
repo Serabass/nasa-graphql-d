@@ -1,5 +1,10 @@
 # import NEOObject from './neo-object.graphql'
 
-type NeoBrowseResponse {
+type NeoBrowseResponseResult {
     near_earth_objects: [NEOObject!]!
+}
+
+type NeoBrowseResponse {
+    url: String!
+    result: NeoBrowseResponseResult
 }

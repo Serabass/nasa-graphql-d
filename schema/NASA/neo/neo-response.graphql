@@ -1,7 +1,12 @@
 
-type NeoResponse {
+type NeoResponseResult {
     id: String!
     neo_reference_id: String!
     name: String!
     sandbox: String!
+}
+
+type NeoResponse {
+    url: String!
+    result: NeoResponseResult
 }

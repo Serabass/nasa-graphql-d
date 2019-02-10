@@ -2,8 +2,13 @@
 # import ScoutObject from './scout-object.graphql'
 
 # https://ssd-api.jpl.nasa.gov/doc/scout.html
-type Scout {
+type ScoutResult {
     count: String
     signature: Signature
     data: [ScoutObject]
+}
+
+type Scout {
+    url: String!
+    result: ScoutResult
 }

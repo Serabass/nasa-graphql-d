@@ -1,6 +1,12 @@
 # import Photo2 from './photo2.graphql'
 
-type PhotosResponse2 {
+type PhotosResponse2Result {
     photos: [Photo2!]!
     urls: [String]
 }
+
+type PhotosResponse2 {
+    url: String!
+    result: PhotosResponse2Result
+}
+
