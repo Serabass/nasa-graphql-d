@@ -1,11 +1,12 @@
 import ApolloClient, {gql} from "apollo-boost";
-// import {server} from "../../src/server";
+import {server} from "../../src/server";
 import fetch from "node-fetch";
 
 describe('Url Building Tests', () => {
     let client: ApolloClient<any>;
 
     beforeAll(async () => {
+        await server.listen();
         // await server.listen();
         client = new ApolloClient({
             uri: "http://localhost:4000",
@@ -58,5 +59,16 @@ describe('Url Building Tests', () => {
         expect(result).toBeDefined();
         expect(result.data.NASA.marsPhotos.rovers.photos.url)
             .toBe("https://api.nasa.gov/mars-photos/api/v1/rovers/photos?api_key=DEMO_KEY&sol=1000&roverName=curiosity");
+    });
+
+    it('Url must be correct 4', async() => {
+        let result = await q(`query { GeneLab { search(term: "1") { url } } }`);
+        expect(result).toBeDefined();
+        expect(result.data.GeneLab.search.url)
+            .toBe("https://genelab-data.ndc.nasa.gov/genelab/data/search?term=1&from=0&size=25");
+    });
+
+    afterAll(async () => {
+        await server.stop();
     });
 });

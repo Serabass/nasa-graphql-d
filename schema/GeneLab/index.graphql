@@ -10,5 +10,5 @@ type GeneLabQuery {
         order: String
         ffield: String
         fvalue: String
-    ): GeneLabSearchResponse
+    ): GeneLabSearchResponse @Fetch(path: "/genelab/data/search")
 }
